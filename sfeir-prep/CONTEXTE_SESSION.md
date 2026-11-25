@@ -41,8 +41,9 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 |---|---|
 | Simulation 1, exercice P1 (classifieur de mails) | ✅ Fait — débrief : `debriefs/simulation-1_P1_classifieur-mails.md` |
 | Simulation 1, exercice P2 (critique d'un mauvais prompt) | ✅ Fait — débrief : `debriefs/simulation-1_P2_critique-prompt-CR.md` |
-| Simulation 2 : debugging `chatbot_bugge.py` | ⏭ **Prochaine étape** — énoncé présenté, code pas encore lu ni exécuté. Reprise dans VS Code : c'est moi qui édite et exécute le fichier (pair programming réaliste) |
-| Simulation 2 bis : `partie3-langchain/exercice_cle_api/` (clé API fournie, vrai LLM) | À faire — énoncé créé, corrigé dans `corriges/exercice_cle_api.md` |
+| Simulation 2 : debugging `chatbot_bugge.py` | ✅ Fait (15,5 / 25) — débrief : `debriefs/simulation-2_chatbot-bugge.md`. 4 plantages sur 4 corrigés (3 avec l'outil), 0 erreur silencieuse sur 8. Corrigé `corriges/partie3_bugs.md` lu pour le débrief. |
+| Simulation 2 (à rejouer) : audit des erreurs silencieuses sans corriger | À faire — exercices 1 à 6 du débrief ; mon fichier `chatbot_bugge.py` contient mes corrections (non commité) |
+| Simulation 2 bis : `partie3-langchain/exercice_cle_api/` (clé API fournie, vrai LLM) | **Prochaine étape** — énoncé créé, corrigé dans `corriges/exercice_cle_api.md` |
 | LangSmith (guide + pratique) | À faire — prioritaire |
 | Simulation 3 : P3 + P4 + `extracteur_bugge.py` | À faire |
 | Simulation 4 : entretien blanc complet de 60 min, exercices inédits | À faire |
@@ -71,3 +72,16 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
   - 80 pages : le contexte suffit peut-être, mais la qualité baisse → découpage + extraction puis rédaction (pas un RAG) ;
   - relire le prompt (fautes de frappe) ; réponses plus courtes (10 min visées, 30 réalisées).
 - **Notion clarifiée :** en chatbot, la règle « refuse tout sauf le CR » doit autoriser les corrections du CR.
+
+## Ce qu'on a appris sur moi (Simulation 2)
+
+- **Points forts :** lecture avant exécution avec prédiction juste (overlap > chunk), repérage du modèle et de ses réglages, du prompt trop pauvre et du retriever par mots-clés ; relecture de chaque changement de l'assistant dans l'éditeur ; honnêteté (« je ne comprends pas ») ; vision client (jeu de test, évaluation avant prod).
+- **À corriger :**
+  - je travaille avec un assistant de code et je n'explique pas les erreurs avec mes mots : **expliquer chaque erreur en une phrase** ;
+  - je rate les **erreurs silencieuses** (clé en dur, tri inversé, question dans le prompt système, mémoire effacée, **sessions partagées = fuite de données**) : classer en 3 familles *plante / faux sans planter / risque de prod* ;
+  - je n'ai pas **vérifié l'unité** de `chunk_size` (caractères, pas tokens) : 20 / 10 est trop petit ; en POC, ne pas découper ou ~200 / 20-30 ;
+  - je ne demande pas d'**indice** ; je répète ma méthode au lieu de répondre à la question posée ;
+  - **LangSmith jamais cité** alors que je l'ai annoncé maîtrisé ;
+  - respecter le chrono (25 min dépassées).
+- **À poser en début d'entretien :** « Puis-je m'appuyer sur un assistant de code ? »
+- **Mon fichier `chatbot_bugge.py`** contient mes corrections (non commité) : le copier avant de remettre l'original pour rejouer l'audit.
