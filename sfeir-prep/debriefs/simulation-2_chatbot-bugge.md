@@ -26,6 +26,16 @@ Tu as dit que tu te sentais jugée comme une développeuse. Voici ce qui est att
 
 **Ta vraie valeur de consultante est dans les erreurs silencieuses.** Une erreur qui plante, l'assistant la voit tout seul. Une erreur qui laisse le programme tourner (tous les collaborateurs dans la même conversation, le mauvais contexte envoyé au modèle, une clé secrète dans le code), il ne la signale pas forcément. Là, ton jugement fait la différence. Les 6 bugs que tu as ratés sont tous de ce type. Parmi eux, **la clé secrète et les conversations partagées se repèrent par bon sens**, sans savoir programmer : ce sont les 2 à viser en priorité. Les trois autres (tri, mémoire effacée, chaîne reconstruite) relèvent plutôt du métier d'ingénieure.
 
+## Les 11 bugs : ce qui relève de la consultante, ce qui relève de l'ingénieure
+
+| Niveau | Bugs | Ce qu'on attend de toi |
+|---|---|---|
+| **Consultante (bon sens, sans code)** | Clé secrète en clair (1) · conversations partagées (11) · pas de consigne « réponds seulement depuis le contexte » (7) · modèle, température, longueur (4) · question de l'utilisateur dans le prompt système = risque d'injection (5) | Les **repérer**, expliquer le **risque pour le client**, dire quoi faire. |
+| **À savoir expliquer en une phrase** | Overlap plus grand que le chunk (2) · noms qui ne correspondent pas entre prompt et chaîne (6) | Lire le message d'erreur, dire ce qu'il signifie. L'assistant corrige. |
+| **Ingénieure (l'assistant s'en charge)** | Réponse = objet message, pas texte (9) · tri à l'envers (3) · mémoire recréée (8) · chaîne reconstruite (10) | Les **vérifier par un test** ou une trace, sans connaître la syntaxe. |
+
+Sur ces 11 bugs, **3 relèvent surtout de la lecture consultante** (1, 11, 7) : ce sont eux que tu dois viser avant vendredi.
+
 ## Ta note sur la grille
 
 | Critère | Note | Commentaire |
