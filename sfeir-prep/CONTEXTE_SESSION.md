@@ -25,6 +25,7 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 - `partie2-prompting/EXERCICES.md` : exercices P1 à P5 + `playground.py`.
 - `partie3-langchain/` : `chatbot_bugge.py` (11 bugs) et `extracteur_bugge.py` (8 bugs), avec `ENONCE.md`.
 - `langsmith/` : `GUIDE.md` + `demo_eval.py`.
+- `FICHE_debugging_consultante.md` : fiche d'une page (déroulé en 5 temps, 3 risques à toujours chercher, comment lire une erreur sans être développeuse).
 - `corriges/` : **ne pas me montrer les corrigés avant que j'aie fait l'exercice.**
 - `debriefs/` : un fichier de débrief par exercice terminé.
 
@@ -83,5 +84,6 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
   - je ne demande pas d'**indice** ; je répète ma méthode au lieu de répondre à la question posée ;
   - **LangSmith jamais cité** alors que je l'ai annoncé maîtrisé ;
   - respecter le chrono (25 min dépassées).
+- **Calibrage important :** je suis consultante, pas développeuse. Ne pas me faire travailler sur la syntaxe (noms de variables, types d'objets) : l'assistant de code s'en charge. Me faire travailler sur **ce qui est pertinent pour une consultante** : lire une erreur et la décrire par son effet, repérer les risques client (secrets, conversations partagées, absence de consigne anti-invention), vérifier que le comportement est correct, dire quoi faire avant la prod.
 - **À poser en début d'entretien :** « Puis-je m'appuyer sur un assistant de code ? »
 - **Mon fichier `chatbot_bugge.py`** contient mes corrections (non commité) : le copier avant de remettre l'original pour rejouer l'audit.
