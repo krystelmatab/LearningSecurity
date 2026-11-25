@@ -44,8 +44,8 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 | Simulation 1, exercice P2 (critique d'un mauvais prompt) | ✅ Fait — débrief : `debriefs/simulation-1_P2_critique-prompt-CR.md` |
 | Simulation 2 : debugging `chatbot_bugge.py` | ✅ Fait (15,5 / 25) — débrief : `debriefs/simulation-2_chatbot-bugge.md`. 4 plantages sur 4 corrigés (3 avec l'outil), 0 erreur silencieuse sur 8. Corrigé `corriges/partie3_bugs.md` lu pour le débrief. |
 | Simulation 2 (à rejouer) : audit des erreurs silencieuses sans corriger | À faire — exercices 1 à 6 du débrief ; mon fichier `chatbot_bugge.py` contient mes corrections (non commité) |
-| Simulation 2 bis : `partie3-langchain/exercice_cle_api/` (clé API fournie, vrai LLM) | **Prochaine étape** — énoncé créé, corrigé dans `corriges/exercice_cle_api.md` |
-| LangSmith (guide + pratique) | À faire — prioritaire |
+| Simulation 2 bis : `partie3-langchain/exercice_cle_api/` (clé API fournie, vrai LLM) | ✅ Fait, **partiel** (12,5 / 25) — débrief : `debriefs/simulation-2bis_cle-api.md`. Cadrage et diagnostic du prompt très bons ; exercice arrêté avant la première exécution, 9 bugs corrigés ensuite avec un autre assistant sans explication orale. Corrigé `corriges/exercice_cle_api.md` lu pour le débrief. À compléter : exercice 1 du débrief (expliquer mon propre diff). |
+| LangSmith (guide + pratique) | **Prochaine étape** — prioritaire |
 | Simulation 3 : P3 + P4 + `extracteur_bugge.py` | À faire |
 | Simulation 4 : entretien blanc complet de 60 min, exercices inédits | À faire |
 
@@ -87,3 +87,14 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 - **Calibrage important :** je suis consultante, pas développeuse. Ne pas me faire travailler sur la syntaxe (noms de variables, types d'objets) : l'assistant de code s'en charge. Me faire travailler sur **ce qui est pertinent pour une consultante** : lire une erreur et la décrire par son effet, repérer les risques client (secrets, conversations partagées, absence de consigne anti-invention), vérifier que le comportement est correct, dire quoi faire avant la prod.
 - **À poser en début d'entretien :** « Puis-je m'appuyer sur un assistant de code ? »
 - **Mon fichier `chatbot_bugge.py`** contient mes corrections (non commité) : le copier avant de remettre l'original pour rejouer l'audit.
+
+## Ce qu'on a appris sur moi (Simulation 2 bis)
+
+- **Points forts :** cadrage client très complet avant de coder (types de réunion, taille maximale, pipeline pour documents longs, format attendu) ; diagnostic du prompt mot par mot (« créatif » contre « ne pas inventer ») ; réflexe `.env` pour la clé ; mode « faux modèle » utilisé pour s'entraîner sans clé.
+- **À corriger :**
+  - j'ai **arrêté l'exercice avant de lancer** le programme en disant que l'assistant avait tout corrigé : en entretien, on ne peut pas arrêter, et il faut **expliquer à voix haute** ;
+  - la **clé affichée par le programme** n'a été vue qu'après relance (alors que c'est le risque n°1 de la fiche) ; 7 bugs sur 9 jamais évoqués pendant l'échange ;
+  - lire le code en **3 passes** : secrets et noms, réglages du modèle, gestion des erreurs ;
+  - **répondre à la question posée** (« pourquoi afficher la clé est grave ? » est resté sans réponse) ;
+  - mon prompt réécrit reprend les **numéros de dossier** tels quels : à valider avec le client (données personnelles) ; manquent la règle « date non précisée » et le cas d'une attribution contestée (Marie/Paul).
+- **À ranger (non commité) :** `exercice_cle_api/.env.example` supprimé par erreur (à restaurer), `.env copy.example` et `cr_reunion_gemini.py` en trop.
