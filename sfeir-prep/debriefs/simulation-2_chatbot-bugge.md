@@ -8,11 +8,11 @@
 **Ton point fort : la lecture « consultante » du code, avant de lancer.** Sans exécuter, tu as repéré : le chunk plus petit que l'overlap (et prédit que ça planterait : c'était juste), le modèle et ses réglages (température, longueur max), le prompt trop pauvre (pas de format, pas de cas « hors base », risque de « oublie tes consignes »), et le retriever par mots-clés. Tu as aussi pensé à la suite : jeu de test fourni par le client, évaluation avant la prod.
 
 **Ce qui a manqué :**
-- les **erreurs silencieuses** (le programme tourne mais c'est faux) : aucune trouvée sur les 8, alors que ce sont elles qui font la différence ;
+- les **erreurs silencieuses** (le programme tourne mais c'est faux) : 2 repérées à la lecture sur 8 (modèle et réglages, consigne de réponse), aucune corrigée. Les plus parlantes pour un client (clé secrète, conversations partagées) sont passées à côté ; elles ne demandent pas de savoir programmer ;
 - les **explications avec tes mots** : tu as corrigé 3 erreurs de « plantage » avec l'outil, mais je n'ai pas entendu pourquoi elles plantaient ;
 - la **vérification de ce que l'outil propose**.
 
-**Verdict probable d'un évaluateur SFEIR :** « Bonne lecture de départ et bonne vision du cadre client, mais s'appuie entièrement sur l'outil et n'a rien repéré de silencieux. » Niveau **moyen**. C'est le point le plus entraînable de toute ta préparation.
+**Verdict probable d'un évaluateur SFEIR :** « Bonne lecture de départ et bonne vision du cadre client, mais s'appuie beaucoup sur l'outil et a laissé passer les risques les plus visibles pour le client (clé secrète, conversations partagées). » Niveau **moyen**. C'est le point le plus entraînable de toute ta préparation.
 
 ## Ce que cet exercice mesure vraiment (réponse à ta question)
 
@@ -24,7 +24,7 @@ Tu as dit que tu te sentais jugée comme une développeuse. Voici ce qui est att
 | Trouver seule toutes les erreurs de nommage | Dire pourquoi un plantage a eu lieu, avec tes mots |
 | Se passer d'assistant (à confirmer avec l'évaluateur) | Contrôler ce que l'assistant propose |
 
-**Ta vraie valeur de consultante est dans les erreurs silencieuses.** Une erreur qui plante, l'assistant la voit tout seul. Une erreur qui laisse le programme tourner (tous les collaborateurs dans la même conversation, le mauvais contexte envoyé au modèle, une clé secrète dans le code), il ne la signale pas forcément. Là, ton jugement fait la différence. Les 6 bugs que tu as ratés sont tous de ce type.
+**Ta vraie valeur de consultante est dans les erreurs silencieuses.** Une erreur qui plante, l'assistant la voit tout seul. Une erreur qui laisse le programme tourner (tous les collaborateurs dans la même conversation, le mauvais contexte envoyé au modèle, une clé secrète dans le code), il ne la signale pas forcément. Là, ton jugement fait la différence. Les 6 bugs que tu as ratés sont tous de ce type. Parmi eux, **la clé secrète et les conversations partagées se repèrent par bon sens**, sans savoir programmer : ce sont les 2 à viser en priorité. Les trois autres (tri, mémoire effacée, chaîne reconstruite) relèvent plutôt du métier d'ingénieure.
 
 ## Ta note sur la grille
 
