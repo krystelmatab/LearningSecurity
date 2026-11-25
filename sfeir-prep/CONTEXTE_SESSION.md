@@ -40,8 +40,8 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 | Étape | Statut |
 |---|---|
 | Simulation 1, exercice P1 (classifieur de mails) | ✅ Fait — débrief : `debriefs/simulation-1_P1_classifieur-mails.md` |
-| Simulation 1, exercice P2 (critique d'un mauvais prompt) | ⏭ **Prochaine étape** |
-| Simulation 2 : debugging `chatbot_bugge.py` | À faire |
+| Simulation 1, exercice P2 (critique d'un mauvais prompt) | ✅ Fait — débrief : `debriefs/simulation-1_P2_critique-prompt-CR.md` |
+| Simulation 2 : debugging `chatbot_bugge.py` | ⏭ **Prochaine étape** |
 | LangSmith (guide + pratique) | À faire — prioritaire |
 | Simulation 3 : P3 + P4 + `extracteur_bugge.py` | À faire |
 | Simulation 4 : entretien blanc complet de 60 min, exercices inédits | À faire |
@@ -57,3 +57,16 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
   - j'ai confondu un test de fumée (5 exemples) avec un vrai jeu d'évaluation (échantillon de l'historique étiqueté) ;
   - ne pas dire en entretien que j'utilise un chatbot pour concevoir mes prompts.
 - **Notions clarifiées après coup :** les balises XML servent de délimiteurs (pas du code), `{variable}` est remplacée par le code à chaque appel, `A | B` veut dire « une de ces valeurs ». Le prompt *guide*, le code *garantit*.
+
+## Ce qu'on a appris sur moi (Simulation 1, P2)
+
+- **Points forts :** cadrage (source, langue, données sensibles, périmètre), intégration des retours, honnêteté (« je ne sais pas, aide »), bon réflexe de contredire quand le contexte l'impose (chatbot : tout est rôle *user*, pas de variable remplacée par le code).
+- **À corriger :**
+  - faire le **diagnostic mot par mot** du prompt d'origine (« bien », « important », « créatif »… et la contradiction « ne pas inventer » / « sois créatif ») avant de réécrire ;
+  - **mettre un exemple** dans le prompt, même court, sur le cas piège (action ambiguë, date absente) ;
+  - traiter l'**attribution ambiguë**, pas seulement l'absence d'information ;
+  - ne pas compter sur une **auto-relecture V1→V2 invisible** : citations/horodatages, ou deux appels tracés dans LangSmith ;
+  - évaluation : référence validée par le client, comparaison ancien/nouveau prompt sur les mêmes cas, métriques précises, jeu de 20-30 cas ;
+  - 80 pages : le contexte suffit peut-être, mais la qualité baisse → découpage + extraction puis rédaction (pas un RAG) ;
+  - relire le prompt (fautes de frappe) ; réponses plus courtes (10 min visées, 30 réalisées).
+- **Notion clarifiée :** en chatbot, la règle « refuse tout sauf le CR » doit autoriser les corrections du CR.
