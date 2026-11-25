@@ -41,7 +41,7 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
 |---|---|
 | Simulation 1, exercice P1 (classifieur de mails) | ✅ Fait — débrief : `debriefs/simulation-1_P1_classifieur-mails.md` |
 | Simulation 1, exercice P2 (critique d'un mauvais prompt) | ✅ Fait — débrief : `debriefs/simulation-1_P2_critique-prompt-CR.md` |
-| Simulation 2 : debugging `chatbot_bugge.py` | ⏭ **Prochaine étape** |
+| Simulation 2 : debugging `chatbot_bugge.py` | ⏭ **Prochaine étape** — énoncé présenté, code pas encore lu ni exécuté. Reprise dans VS Code : c'est moi qui édite et exécute le fichier (pair programming réaliste) |
 | LangSmith (guide + pratique) | À faire — prioritaire |
 | Simulation 3 : P3 + P4 + `extracteur_bugge.py` | À faire |
 | Simulation 4 : entretien blanc complet de 60 min, exercices inédits | À faire |
