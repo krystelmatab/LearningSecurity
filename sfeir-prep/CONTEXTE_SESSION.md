@@ -55,7 +55,7 @@ Comportement attendu : raisonner à voix haute, expliquer ses choix, collaborer 
   - je ne précise pas la sortie attendue pour les cas limites (injection) ;
   - je n'intègre pas toujours ce que le client a validé pendant l'échange ;
   - j'ai confondu un test de fumée (5 exemples) avec un vrai jeu d'évaluation (échantillon de l'historique étiqueté) ;
-  - ne pas dire en entretien que j'utilise un chatbot pour concevoir mes prompts.
+  - utiliser un LLM pour concevoir un prompt (brain dump, puis « interviewe-moi ») est une pratique courante : la présenter comme une méthode maîtrisée, avec validation par moi sur les cas difficiles, jamais comme un renvoi de l'exercice.
 - **Notions clarifiées après coup :** les balises XML servent de délimiteurs (pas du code), `{variable}` est remplacée par le code à chaque appel, `A | B` veut dire « une de ces valeurs ». Le prompt *guide*, le code *garantit*.
 
 ## Ce qu'on a appris sur moi (Simulation 1, P2)

@@ -30,9 +30,9 @@
 
 ## Les 6 points à corriger
 
-### 1. Ne dis pas « j'utilise un chatbot pour concevoir le prompt »
+### 1. Présente l'usage d'un LLM comme une méthode, pas comme un remplacement de ton raisonnement
 
-En entretien, l'évaluateur veut voir *ton* raisonnement. Dire que tu délègues la conception à un chatbot donne l'impression que tu ne sais pas le faire. Tu peux le dire comme une pratique réelle, mais après coup : « En mission, j'utilise aussi un LLM pour challenger mes prompts. »
+Utiliser un LLM pour concevoir un prompt (brain dump du contexte, puis « pose-moi des questions et challenge-moi ») est une pratique courante, et SFEIR forme sur Claude : ce n'est pas un problème en soi. Le risque est de répondre « je demanderais à un chatbot » à la place de montrer *ton* raisonnement, alors que c'est lui qu'on évalue. Présente-le comme une méthode que tu maîtrises : « Je pars d'un brain dump, je demande au LLM de m'interviewer, puis je valide moi-même le prompt sur les cas difficiles. » La validation par toi est la partie qui compte : un prompt généré peut avoir les mêmes trous que le tien (définitions, exemples, cas limites).
 
 ### 2. Les catégories doivent être définies dans le prompt
 

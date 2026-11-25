@@ -86,7 +86,7 @@ Pour le POC en interface chat : **A**, parce qu'on ne peut rien orchestrer.
 
 Tu as dit que tu le ferais « à part » avec un autre LLM parce que c'est long. Deux remarques :
 
-- Ne dis pas à l'évaluateur que tu fais générer ton exemple par un autre LLM (même point qu'en P1). Dis : « J'écrirais un mini-exemple de 6 à 8 lignes de transcription avec leur CR, sur un cas piège. »
+- Faire générer un exemple par un LLM est une pratique courante, mais ne le présente pas comme un renvoi de l'exercice. Dis plutôt : « J'écrirais un mini-exemple de 6 à 8 lignes de transcription avec leur CR, sur un cas piège, que je peux faire générer par un LLM puis valider moi-même. » Ce qui compte, c'est que tu choisisses le cas piège et que tu vérifies le résultat.
 - En entretien, un exemple court suffit, même 3 lignes. Il montre le format attendu et le cas difficile (action ambiguë). C'est le plus gros levier de qualité sur ce prompt.
 
 ### 5. L'évaluation : bons critères, mais il manque trois choses
