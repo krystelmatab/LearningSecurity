@@ -1,0 +1,10 @@
+Comité de pilotage - Projet Portail Sinistres - 14-11-2026
+
+[10:02] Marie : Bonjour à tous. Premier point : le retard du prestataire. Il faut le prévenir, je m'en occupe.
+[10:04] Paul : OK. Pour la migration des dossiers, on est où ?
+[10:04] Marie : Ça dépend de toi, Paul, non ?
+[10:05] Paul : Peut-être, mais ça dépend aussi des données du client Dupont Assurances, on attend leur extraction.
+[10:07] Sophie: Can we fix a date for the test campaign? I would say before the end of the month.
+[10:08] Marie : On valide la campagne de tests avant la fin du mois, c'est décidé.
+[10:09] Paul : Je regarde le budget supplémentaire, 12 000 euros pour l'environnement de recette, mais je ne sais pas qui doit valider.
+[10:11] Marie : On en reparle la semaine prochaine. Merci à tous.

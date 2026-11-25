@@ -18,6 +18,7 @@ Ton positionnement à tenir pendant toute l'heure :
 |---|---|
 | `partie2-prompting/` | 5 exercices de prompting réalistes + `playground.py` pour les tester |
 | `partie3-langchain/` | 2 programmes buggés qui tournent vraiment : `chatbot_bugge.py` (RAG + mémoire, 11 bugs) et `extracteur_bugge.py` (structured output, 8 bugs) |
+| `partie3-langchain/exercice_cle_api/` | **Simulation 2 bis** : un programme qui appelle un vrai LLM avec une clé API fournie par l'évaluateur (configurer la clé, lire les erreurs 401/404, 9 bugs + prompt) |
 | `langsmith/` | Guide express + `demo_eval.py` (dataset, évaluateurs, experiment) |
 | `corriges/` | ⚠️ **Ne pas ouvrir avant d'avoir fait la simulation correspondante** |
 
